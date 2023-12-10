@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Transformation</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/uploaded.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <img src="{{ url_for('static', filename=img_dir) }}" class="center" alt="Uploaded Image" style="margin-top: 20px; width: 600px">
+    <div class="btn-group-vertical" role="group" aria-label="Vertical button group"
+         style="display: block; margin-left: auto; margin-right: auto; padding-left: 450px; padding-right: 450px">
+{#      <button type="button" class="btn btn-success" style="margin-top: 20px">#}
+{#          <li style="list-style-type: none"><a href="#" style="text-decoration: none; color: white">Geometric Transformation</a></li>#}
+{#      </button>#}
+
+      <div class="btn-group" role="group" style="margin-top: 20px">
+        <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Color Transformation
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <li><a class="dropdown-item " href="/color_transformation/brightness/{{ img_name }}">Brightness</a></li>
+            <li><a class="dropdown-item" href="/color_transformation/contrast/{{ img_name }}">Contrast</a></li>
+            <li><a class="dropdown-item" href="/color_transformation/brightness_and_contrast/{{ img_name }}">Brightness + Contrast</a></li>
+            <li><a class="dropdown-item" href="/color_transformation/logarithm/{{ img_name }}"> Logarithmic</a></li>
+            <li><a class="dropdown-item" href="/color_transformation/exponential/{{ img_name }}"> Exponential </a></li>
+            <li><a class="dropdown-item" href="/color_transformation/histogram_equalization/{{ img_name }}">Histogram Equalization</a></li>
+            <li><a class="dropdown-item" href="/upload_gray_file/{{ img_name }}"> Histogram Specification</a></li>
+        </ul>
+      </div>
+
+{#    <div class="btn-group" role="group" style="margin-top: 20px">#}
+{#        <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">#}
+{#          Smoothing#}
+{#        </button>#}
+{#        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">#}
+{#            <li><a class="dropdown-item" href="#">Mean</a></li>#}
+{#            <li><a class="dropdown-item" href="#">Gaussian</a></li>#}
+{#            <li><a class="dropdown-item" href="#">Median</a></li>#}
+{#        </ul>#}
+{#      </div>#}
+{##}
+{#      <div class="btn-group" role="group" style="margin-top: 20px">#}
+{#        <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">#}
+{#          Edge Detection#}
+{#        </button>#}
+{#        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">#}
+{#            <li><a class="dropdown-item" href="#">Gradient</a></li>#}
+{#            <li><a class="dropdown-item" href="#">Laplace</a></li>#}
+{#            <li><a class="dropdown-item" href="#">Laplace of Gaussian</a></li>#}
+{#            <li><a class="dropdown-item" href="#">Canny</a></li>#}
+{#        </ul>#}
+{#      </div>#}
+
+
+      <button type="button" class="btn btn-success" style="margin-top: 20px">
+        <a href="/" style="display: block; text-decoration: none; color: white">Go Home</a>
+      </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
