@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 Download the project from GitHub either as a zip folder or by executing the following command:
 ```
-https://github.com/Trunkg0d/Image_Transform_Web.git
+git clone https://github.com/Trunkg0d/Image_Transform_Web.git
 ```
 
 ### Executing program
